@@ -1,23 +1,10 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
-//資料庫設定
-//資料庫位置
-$db_server = "localhost";
-//資料庫名稱
-$db_name = "phpmember";
-//資料庫管理者帳號
-$db_user = "qaz";
-//資料庫管理者密碼
-$db_passwd = "wsx";
-
-//對資料庫連線
-if(!@mysql_connect($db_server, $db_user, $db_passwd))
-        die("無法對資料庫連線");
-
-//資料庫連線採UTF8
-mysql_query("SET NAMES utf8");
-
-//選擇資料庫
-if(!@mysql_select_db($db_name))
-        die("無法使用資料庫");
-?>
+$db_host = "localhost";
+$db_table= "phpmember";
+$db_username= "qaz";
+$db_password= "wsx";
+if (!@mysql_connect($db_host, $db_username, $db_password))
+die("資料連結失敗~");
+if (!@mysql_select_db($db_table)) die("資料庫選擇失敗!");
+mysql_query("SET NAMES 'utf8'");
+ ?>
