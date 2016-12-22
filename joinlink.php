@@ -102,10 +102,8 @@ function checkmail(myEmail){//信箱格式限制
   return false;
 }
 </script>
-</heas>
 
 
-<body>
   <?php if(isset($_GET["loginStats"])&&($_GET["loginStats"]=="1")){?>
   <script language="javascript">
   alert('會員新增成功\n可用申請的帳號密碼登入。');
